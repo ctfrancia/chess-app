@@ -31,9 +31,9 @@ function Month({ year, month, firstDayOfWeek }) {
       </div>
       <div
         css={{
-          display: 'grid',
-          gridDisplayColumns: 'repeat(7, 1fr)',
-          justifyContent: 'center'
+          display: "grid",
+          gridTemplateColumns: "repeat(7, 1fr)",
+          justifyContent: "center"
         }}>
         { days.map((day, i) => {
           if (typeof day === 'object') {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {START_DATE, useDatepicker} from "@datepicker-react/hooks";
 import DatepickerContext from './datepickerContext';
 import NavButton from './NavButton';
+import Month from './Month';
 
 function Datepicker() {
   const [state, setState] = useState({
@@ -50,37 +51,37 @@ function Datepicker() {
         onDateHover
       }}
     >
-      <div>
-        <strong>Focused input: </strong>
-        {state.focusedInput}
-      </div>
-      <div>
-        <strong>Start date: </strong>
-        {state.startDate && state.startDate.toLocaleString()}
-      </div>
-      <div>
-        <strong>End date: </strong>
-        {state.endDate && state.endDate.toLocaleString()}
-      </div>
-      <NavButton onClick={goToPreviousMonths}>Previous</NavButton>
-      <NavButton onClick={goToNextMonths}>Next</NavButton>
-      <div
-        css={{
-          display: "grid",
-          margin: "32px 0 0",
-          gridTemplateColumns: `repeat(${activeMonths.length}, 300px)`,
-          gridGap: "0 64px"
-        }}
-      >
-        {activeMonths.map(month => (
-          <Month
-            key={`${month.year}-${month.month}`}
-            year={month.year}
-            month={month.month}
-            firstDayOfWeek={firstDayOfWeek}
-          />
-        ))}
-      </div>
+        <div>
+          <strong>Focused input: </strong>
+          {state.focusedInput}
+        </div>
+        <div>
+          <strong>Start date: </strong>
+          {state.startDate && state.startDate.toLocaleString()}
+        </div>
+        <div>
+          <strong>End date: </strong>
+          {state.endDate && state.endDate.toLocaleString()}
+        </div>
+        <NavButton onClick={goToPreviousMonths}>Previous</NavButton>
+        <NavButton onClick={goToNextMonths}>Next</NavButton>
+        <div
+          css={{
+            display: "grid",
+            margin: "32px 0 0",
+            gridTemplateColumns: `repeat(${activeMonths.length}, 300px)`,
+            gridGap: "0 64px"
+          }}
+        >
+          {activeMonths.map(month => (
+            <Month
+              key={`${month.year}-${month.month}`}
+              year={month.year}
+              month={month.month}
+              firstDayOfWeek={firstDayOfWeek}
+            />
+          ))}
+        </div>
     </DatepickerContext.Provider>
   );
 }
