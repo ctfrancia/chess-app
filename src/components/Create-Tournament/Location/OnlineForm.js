@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setTournamentWebsite, setTournamentUrl } from '../../../actions';
+import Datepicker from 'react-datetime'
 
-let OnlineForm = () => {
+const OnlineForm = () => {
   const dispatch = useDispatch();
   return (
     <div>
@@ -14,6 +15,7 @@ let OnlineForm = () => {
       <input type='text' onChange={event => dispatch(setTournamentUrl(event.target.value))}/>
 
       <label> Date: </label>
+      <Datepicker />
     </div>
   )
 }

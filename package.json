@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "core-js": "3",
     "eslint": "^6.8.0",
+    "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-datetime": "^2.16.3",
     "react-dom": "^16.13.1",
