@@ -11,7 +11,7 @@ const navContainer = {
 	justifyContent: 'space-evenly'
 }
 
-function Nav() {
+export default function Nav() {
 	return (
 		<Router>
 			<div>
@@ -37,4 +37,3 @@ function Nav() {
 	)
 }
 
-export default Nav;

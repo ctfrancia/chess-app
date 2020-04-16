@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CreateTournament = () => {
+export default function CreateTournament() {
   return (
     <h2> Create Tournament</h2>
+
   )
 }
 
-export default CreateTournament;
