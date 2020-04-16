@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import TournamentItem from '../containers/TournamentItem';
-import { getTournamentsAsync } from '../actions';
+import TournamentItem from '../../containers/TournamentItem';
+import { getTournamentsAsync } from '../../actions';
 
 let Home = ({ getTournamentsAsync }) => {
 
 	useEffect(() => {
 		getTournamentsAsync();
 	}, [getTournamentsAsync]);
-
 	return(
 		<div>
 			<h2> home </h2>

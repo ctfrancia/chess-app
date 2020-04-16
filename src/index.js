@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 import './index.css';
-import App from './components/App';
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import reducer from './reducers';
 import rootSaga from './sagas';
