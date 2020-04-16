@@ -4,7 +4,7 @@ import {
   Switch, Route, Link } from "react-router-dom";
 import Home from '../Home/Home';
 import About from '../About/About';
-import CreateTournament from "../Create-Tournament/Create-Tournament";
+import CreateTournament from "../Create-Tournament/CreateTournament";
 const navContainer = {
 	display: 'flex',
 	width: '100vw',
