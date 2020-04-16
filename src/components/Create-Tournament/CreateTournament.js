@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import ErrorMessage from "./FormErrors";
+import ErrorMessage from './FormErrors';
 import Location from './Location/Location';
 
 export default function CreateTournament() {

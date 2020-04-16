@@ -1,7 +1,20 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setTournamentWebsite, setTournamentUrl } from '../../../actions';
 
-export default function OnlineForm() {
+let OnlineForm = () => {
+  const dispatch = useDispatch();
   return (
-    <h2>online</h2>
+    <div>
+      <h2>online</h2>
+      <label> website: </label>
+      <input type='text' onChange={event => dispatch(setTournamentWebsite((event.target.value)))} />
+
+      <label> URL: </label>
+      <input type='text' onChange={event => dispatch(setTournamentUrl(event.target.value))}/>
+
+      <label> Date: </label>
+    </div>
   )
 }
+export default OnlineForm;
