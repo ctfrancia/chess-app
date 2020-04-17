@@ -6,6 +6,7 @@ const reducer = (state = {}, action) => {
     case 'GET_TOURNAMENTS_SUCCESS':
       return { ...state, tournaments: action.json, loading: false }
 
+      /*
     case 'SET_TOURNAMENT_WEBSITE':
       console.log('action', action);
       return {
@@ -22,6 +23,16 @@ const reducer = (state = {}, action) => {
           newTournament: {
           ...state.newTournament,
           url: action.url
+        }
+      }
+       */
+    case 'SET_NEW_TOURNAMENT_FIELD':
+      console.log('reducer', action);
+      return {
+        ...state,
+        newTournament: {
+          ...state.newTournament,
+          [action.field]: action.value
         }
       }
      default:

@@ -1,21 +1,24 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setTournamentWebsite, setTournamentUrl } from '../../../actions';
-import Datepicker from '../../DatePicker/Datepicker';
+import { setNewTournamentField } from '../../../actions';
+// import Datepicker from '../../DatePicker/Datepicker';
 
 const OnlineForm = () => {
   const dispatch = useDispatch();
+  function updateState(field, value) {
+    dispatch(setNewTournamentField({ field, value }));
+  }
   return (
     <div>
       <h2>online</h2>
       <label> website: </label>
-      <input type='text' onChange={event => dispatch(setTournamentWebsite((event.target.value)))} />
+      <input name='website' type='text' onChange={e => updateState('website', e.target.value)} />
 
       <label> URL: </label>
-      <input type='text' onChange={event => dispatch(setTournamentUrl(event.target.value))}/>
+      <input name='url' type='text' onChange={e => updateState('url', e.target.value)} />
 
       <label> Date: </label>
-      <Datepicker />
+      {/*<Datepicker />*/}
     </div>
   )
 }
